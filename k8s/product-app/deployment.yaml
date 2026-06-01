@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: user-app
+  name: product-app
 
 spec:
   replicas: 2
 
   selector:
     matchLabels:
-      app: user-app
+      app: product-app
 
   template:
     metadata:
       labels:
-        app: user-app
+        app: product-app
 
     spec:
       containers:
-      - name: user-container
+      - name: product-container
 
-        image: syedtabibashraf/user-service:v1
+        image: syedtabibashraf/product-service:v1
 
         ports:
-        - containerPort: 8000
+        - containerPort: 80010
